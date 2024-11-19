@@ -1,0 +1,215 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: url('hero-image.jpg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+header .cta-btn {
+    background: #ff4500;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+header .cta-btn:hover {
+    background: #ff6347;
+}
+
+/* Navbar Positioning: Top-left and Right-aligned Menu */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    padding: 1rem 5%;
+    background: none;
+    position: fixed;
+    top: 0; /* Place navbar at the very top */
+    left: 0; /* Align the navbar to the left */
+    width: 100%; /* Ensure it stretches across the full width */
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+.navbar .logo {
+    flex: 0 1 auto; /* Prevent logo from expanding or shrinking */
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Align menu to the right */
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: wheat;
+    font-weight: bold;
+}
+
+.services, .vehicles, .about {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.service-grid, .vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item, .vehicle-item {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: #ff4500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Fixed Position for Logo (Top-left) */
+.top-center {
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Align logo to the top-left */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+.top-center .logo-img {
+    width: 80px; /* Smaller logo size */
+    height: auto;
+}
+
+.top-center .logo-name {
+    font-size: 1rem; /* Smaller font size for the name */
+    font-weight: bold;
+    margin-top: 5px; /* Space between logo and name */
+}
+
+/* Centering Sections like Why Choose Us, Vision, and Mission */
+section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 4rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Optional: Add some padding for better spacing */
+section.why-choose-us, section.mission, section.vision {
+    padding: 3rem 0;
+}
+
+/* Sales Manager Image */
+.sales-manager-image {
+    width: 80%; /* Adjust the percentage to control the size */
+    max-width: 150px; /* Optional: Set a maximum width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the navbar for smaller screens */
+    .navbar {
+        padding: 1rem 2%;
+    }
+
+    .navbar .menu {
+        flex-direction: column; /* Stack the menu items vertically */
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Adjust header font size on mobile */
+    }
+
+    .services, .vehicles, .about {
+        padding: 3rem 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .service-grid, .vehicle-grid {
+        grid-template-columns: 1fr; /* Stack the grid items vertically */
+    }
+
+    .top-center {
+        top: 10px; /* Adjust position for mobile */
+        left: 10px; /* Adjust position for mobile */
+    }
+
+    .sales-manager-image {
+        width: 60%; /* Reduce image size for mobile */
+        max-width: 120px; /* Optional: Set a max-width for the image */
+    }
+}
+
+/* Media Query for Very Small Screens (below 480px) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Adjust header font size for very small screens */
+    }
+
+    .navbar .menu a {
+        font-size: 1rem; /* Adjust menu font size for smaller screens */
+    }
+
+    .services, .vehicles, .about {
+        padding: 2rem 0.5rem; /* Further reduce padding */
+    }
+
+    .sales-manager-image {
+        width: 50%; /* Reduce image size even further */
+        max-width: 100px; /* Set a smaller max-width for mobile */
+    }
+}
