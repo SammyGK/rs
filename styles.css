@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: url('hero-image.jpg.jpg') no-repeat center center/cover;
+    background: url('images/hero-image.jpg.jpg') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     display: flex;
