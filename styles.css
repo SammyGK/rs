@@ -45,7 +45,7 @@ header .cta-btn:hover {
     background: none;
     position: fixed;
     top: 0; /* Place navbar at the very top */
-    left: 0; /* Align the navbar to the left */
+    left: 60%; /* Align the navbar to the left */
     width: 100%; /* Ensure it stretches across the full width */
     z-index: 10; /* Ensure it stays above other elements */
 }
