@@ -5,11 +5,5 @@
       "src": "ngo.html",
       "use": "@vercel/static"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.js"
-    }
   ]
 }
